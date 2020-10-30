@@ -89,7 +89,7 @@ echo "run ql -h or ql --help"
 echo
 
 # last step
-curl -fsSL https://raw.githubusercontent.com/RoroRie/ql/main/ql  -o /usr/bin/ql
+curl -fsSL https://raw.githubusercontent.com/RoroRie/QLawak/main/ql  -o /usr/bin/ql
 chmod +x /usr/bin/ql
 
 # cleanup
