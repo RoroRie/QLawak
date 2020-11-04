@@ -69,7 +69,7 @@ function restart() {
 }
 
 function status() {
-    $QLS status
+    docker ps -f status=exited
 }
 
 function sn() {
@@ -165,6 +165,13 @@ function scheck() {
     echo
 }
 
+function Umenu() {
+    echo
+    curl -fsSL https://github.com/RoroRie/QLawak/raw/main/ql  -o /usr/bin/ql        
+    chmod +x /usr/bin/ql
+    echo
+}
+
 function parse_parameters() {
     case "${1}" in
         "-b"|"--bind") bind  ;;
@@ -177,6 +184,7 @@ function parse_parameters() {
         "-so"|"--swapon") addswap ;;
         "-sc"|"--swapcheck") scheck ;;
         "-u"|"--update") update ;;
+        "-U"|"--UpdateMenu") Umenu ;;
 
         # HELP!
         "-h"|"--help"|*) help_menu ;;
